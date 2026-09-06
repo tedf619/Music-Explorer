@@ -44,7 +44,7 @@
 
         void NotifyRequest(HttpRequestMessage request)
         {
-            string message = $"HTTP Request {request.Method} {request.RequestUri}";
+            string message = $"HTTP Request {request.Method} {http.BaseAddress}{request.RequestUri}";
             FireLogMessage(message);
         }
 

@@ -13,6 +13,7 @@ namespace MusicExplorer
             string uri = $"release-group/{releaseGroupId}/front-250";  // 250x250 px front cover image
 
             using HttpResponseMessage response = await GetAsync(uri);
+      
             if (response.StatusCode == HttpStatusCode.NotFound) return null;
             response.EnsureSuccessStatusCode();
 
